@@ -15,7 +15,7 @@ const RoutesContainer = posed.div({
 
 class Dashboard extends Component {
   render() {
-    const { location } = this.props
+    const { location, signOut } = this.props
     return (
       <div id="site-container">
         <div id="content-container">
@@ -24,6 +24,9 @@ class Dashboard extends Component {
             <Link to="/log-in">Log In</Link>
             <Link to="/sign-up">Sign Up</Link>
             <Link to="/about-us">About</Link>
+            <button className={styles.link} onClick={this.props.signOut}>
+              Sign Out
+            </button>
           </header>
         </div>
         <PoseGroup>
