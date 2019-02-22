@@ -5,7 +5,7 @@ import { authorize } from '../actions/user'
 function mapStateToProps(state, props) {
   return {
     props,
-    token: state.user.token
+    token: state.user.auth.token
   }
 }
 

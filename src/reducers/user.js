@@ -1,20 +1,39 @@
-import { SIGNUP, AUTH, UPDATE_TOKEN } from '../actions/user'
+import {
+  SIGNUP,
+  AUTH,
+  UPDATE_TOKEN,
+  SAVE_USER_DETAILS,
+  getTokenFromStorage,
+  isUserLoggedIn
+} from '../actions/user'
 
 const initialState = {
-  everything: true
+  auth: {
+    token: getTokenFromStorage(),
+    isLoggedIn: isUserLoggedIn()
+  }
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_TOKEN:
+      const newToken = state.auth.token ? state.auth.token : action.token
       return {
         ...state,
-        token: action.token
+        auth: {
+          token: newToken
+        }
       }
     case SIGNUP:
       return {
         ...state,
-        userInformation: action.data
+        userInformation: action.data,
+        isLoggedIn: true
+      }
+    case SAVE_USER_DETAILS:
+      return {
+        ...state,
+        details: action.data
       }
     case AUTH:
       return {
