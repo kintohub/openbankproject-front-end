@@ -7,8 +7,8 @@ class LoginForm extends Component {
   render() {
     const { handleSubmit } = this.props
     return (
-      <form onSubmit={handleSubmit}>
-        <div>
+      <div className={styles.Forms}>
+        <form onSubmit={handleSubmit}>
           <div className={styles.section}>
             <Field
               name="password"
@@ -27,9 +27,9 @@ class LoginForm extends Component {
               placeholder="JunjiItoLovesTomie"
             />
           </div>
-        </div>
-        <button type="submit">hit dis</button>
-      </form>
+          <button type="submit">hit dis</button>
+        </form>
+      </div>
     )
   }
 }

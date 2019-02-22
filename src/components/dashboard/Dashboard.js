@@ -24,7 +24,7 @@ class Dashboard extends Component {
             <Link to="/">Home</Link>
             <Link to="/log-in">Log In</Link>
             <Link to="/sign-up">Sign Up</Link>
-            <Link to="/about-us">About</Link>
+            <Link to="/about-us">About KintoHub</Link>
             <button className={styles.link} onClick={signOut}>
               Sign Out
             </button>

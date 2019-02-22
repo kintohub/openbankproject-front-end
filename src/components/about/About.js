@@ -5,7 +5,8 @@ class About extends Component {
     return (
       <div>
         <p>
-          We are making <b>awesome</b> things at <a href="">KintoHub</a>
+          We are making <b>awesome</b> things at
+          <a href="https://www.kintohub.com/"> KintoHub</a>
         </p>
       </div>
     )
