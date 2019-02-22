@@ -4,7 +4,7 @@ import CustomField from './CustomField'
 
 class SignUpForm extends Component {
   render() {
-    const { handleSubmit, pristine, reset, submitting } = this.props
+    const { handleSubmit, submitting } = this.props
 
     return (
       <form onSubmit={handleSubmit}>
