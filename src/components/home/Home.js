@@ -20,7 +20,7 @@ class Home extends Component {
                     This is the information we retrieved from the Open Banking
                     API{' '}
                     <span role="img" aria-label="ladydancing">
-                      💃🏽
+                      🚀
                     </span>
                   </h3>
                   <p>
