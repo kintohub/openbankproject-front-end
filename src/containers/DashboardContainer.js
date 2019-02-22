@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-import { authorize } from '../actions/user'
 import Dashboard from '../components/dashboard/Dashboard'
 
 function mapStateToProps(state) {
@@ -9,13 +8,4 @@ function mapStateToProps(state) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    authorize: dispatch(authorize)
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Dashboard)
+export default connect(mapStateToProps)(Dashboard)
