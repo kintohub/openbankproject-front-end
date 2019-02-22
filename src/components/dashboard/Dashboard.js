@@ -4,6 +4,7 @@ import posed, { PoseGroup } from 'react-pose'
 
 import HomeContainer from '../../containers/HomeContainer'
 import AboutContainer from '../../containers/AboutContainer'
+import LogInContainer from '../../containers/LogInContainer'
 import SignUpContainer from '../../containers/SignUpContainer'
 
 import styles from './Dashboard.module.sass'
@@ -24,7 +25,7 @@ class Dashboard extends Component {
             <Link to="/log-in">Log In</Link>
             <Link to="/sign-up">Sign Up</Link>
             <Link to="/about-us">About</Link>
-            <button className={styles.link} onClick={this.props.signOut}>
+            <button className={styles.link} onClick={signOut}>
               Sign Out
             </button>
           </header>
@@ -34,7 +35,7 @@ class Dashboard extends Component {
             <Switch location={location}>
               <Route exact path="/" component={HomeContainer} />
               <Route exact path="/about-us" component={AboutContainer} />
-              <Route exact path="/log-in" component={AboutContainer} />
+              <Route exact path="/log-in" component={LogInContainer} />
               <Route exact path="/sign-up" component={SignUpContainer} />
             </Switch>
           </RoutesContainer>

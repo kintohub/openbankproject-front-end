@@ -65,6 +65,19 @@ export const signUp = data => dispatch => {
     })
 }
 
+export const logIn = data => dispatch => {
+  return axios
+    .post(
+      `${process.env.REACT_APP_SERVER_URL}/openbankprojectloginapi/users/login`,
+      data
+    )
+    .then(response => {
+      setIsLoggedIn(true)
+      dispatch(saveUser(response.data.user))
+      dispatch(push('/'))
+    })
+}
+
 export const getUser = () => dispatch => {
   return axios
     .get(`${process.env.REACT_APP_SERVER_URL}/openbankprojectloginapi/users/me`)

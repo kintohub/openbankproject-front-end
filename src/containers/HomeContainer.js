@@ -5,7 +5,7 @@ function mapStateToProps(state) {
   const { user } = state
 
   const isLoggedIn = user.auth.isLoggedIn
-  const userDetails = user
+  console.log(user)
   return {
     ...state,
     isLoggedIn

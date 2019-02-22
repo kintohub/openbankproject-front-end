@@ -4,7 +4,7 @@ import CustomField from './CustomField'
 
 class LoginForm extends Component {
   render() {
-    const { handleSubmit, submitting } = this.props
+    const { handleSubmit } = this.props
     return (
       <form onSubmit={handleSubmit}>
         <div>
