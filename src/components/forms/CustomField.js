@@ -14,9 +14,9 @@ class CustomField extends Component {
     } = this.props
     const { touched, submitFailed, error } = this.props.meta
     const hasError = (touched || submitFailed) && error
-    let localClassName = className
+    let localClassName
     if (hasError) {
-      localClassName = className += ' error'
+      localClassName = `${className} error`
     }
 
     const inputEl = (
