@@ -3,6 +3,7 @@ import { push } from 'react-router-redux'
 
 export const SIGNUP = 'SIGNUP'
 export const LOGIN = 'LOGIN'
+export const LOGOUT = 'LOGOUT'
 export const SAVE_USER_DETAILS = 'SAVE_USER_DETAILS'
 export const AUTH = 'AUTH'
 export const UPDATE_TOKEN = 'UPDATE_TOKEN'
@@ -62,4 +63,18 @@ export const signUp = data => dispatch => {
       dispatch(saveUser(response.data.user))
       dispatch(push('/'))
     })
+}
+
+export const getUser = () => dispatch => {
+  return axios
+    .get(`${process.env.REACT_APP_SERVER_URL}/openbankprojectloginapi/users/me`)
+    .then(response => {
+      dispatch(saveUser(response.data.user))
+    })
+}
+
+export const signOut = () => {
+  setToken(null)
+  setIsLoggedIn(null)
+  return { type: LOGOUT }
 }

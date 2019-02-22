@@ -42,9 +42,13 @@ class Auth extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.token)
     if (!this.props.token) {
       this.props.authorize()
+    }
+    if (this.props.isLoggedIn) {
+      this.props.getUser()
+    } else {
+      this.props.redirectToLogIn()
     }
   }
 

@@ -3,6 +3,7 @@ import {
   AUTH,
   UPDATE_TOKEN,
   SAVE_USER_DETAILS,
+  LOGOUT,
   getTokenFromStorage,
   isUserLoggedIn
 } from '../actions/user'
@@ -28,7 +29,9 @@ export default (state = initialState, action) => {
       return {
         ...state,
         userInformation: action.data,
-        isLoggedIn: true
+        auth: {
+          isLoggedIn: true
+        }
       }
     case SAVE_USER_DETAILS:
       return {
@@ -40,6 +43,15 @@ export default (state = initialState, action) => {
         ...state,
         isLoggedIn: action.data
       }
+    case LOGOUT: {
+      return {
+        ...state,
+        auth: {
+          isLoggedIn: false,
+          token: null
+        }
+      }
+    }
     default:
       return state
   }
