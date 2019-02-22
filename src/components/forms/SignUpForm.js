@@ -7,8 +7,8 @@ class SignUpForm extends Component {
     const { handleSubmit, submitting } = this.props
     return (
       <form onSubmit={handleSubmit}>
-        <div>
-          <div className={styles.Forms}>
+        <div className={styles.Forms}>
+          <div>
             <div className={styles.section}>
               <Field
                 name="firstName"
@@ -58,8 +58,8 @@ class SignUpForm extends Component {
               />
             </div>
           </div>
+          <button type="submit">hit dis</button>
         </div>
-        <button type="submit">hit dis</button>
       </form>
     )
   }

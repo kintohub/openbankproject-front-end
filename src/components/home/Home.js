@@ -13,7 +13,7 @@ class Home extends Component {
             <p>Welcome to the madness</p>
           ) : (
             <p>
-              You need to <Link to="/log-in">LOG IN</Link> or
+              You need to <Link to="/log-in">LOG IN</Link> or{' '}
               <Link to="/sign-up">SIGN UP</Link> first to see the page
             </p>
           )}
