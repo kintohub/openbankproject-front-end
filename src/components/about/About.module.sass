@@ -1,0 +1,43 @@
+@import '../../general.sass'
+
+.About
+  display: grid
+  grid-template-columns: 45% 55%
+  align-items: center
+  justify-content: justify-content
+  width: 100%
+  text-align: center
+  height: calc(100vh - 60px)
+  padding: 100px 50px 100px 100px
+  background-image: linear-gradient(to left, $color5 55%, $color2 55%, $color2 75%, $color4 75%)
+  img
+    width: 500px
+  h1
+    color: $color1
+    b, a
+      font-family: 'Anton', sans-serif
+    a, a:visited
+      color: $color1
+      text-decoration: underline
+
+  p
+    max-width: 600px
+    margin: 40px auto
+    font-size: 18px
+    text-align: center
+
+.imageWrapper
+  width: 550px
+  height: 550px
+  border-radius: 275px
+  background: $color5
+  display: flex
+  align-items: center
+  justify-content: center
+
+.slack
+  width: 100%
+  margin: 0 auto
+  img
+    width: 100px
+    margin: 10px auto
