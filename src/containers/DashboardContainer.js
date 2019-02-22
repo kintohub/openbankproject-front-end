@@ -2,20 +2,13 @@ import { connect } from 'react-redux'
 import { authorize } from '../actions/user'
 import Dashboard from '../components/dashboard/Dashboard'
 
-function mapStateToProps(state) {
+function mapStateToProps(state, props) {
   const { isLoggedIn } = state.user
+  console.log(props)
   return {
+    props,
     isLoggedIn
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    authorize: dispatch(authorize)
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Dashboard)
+export default connect(mapStateToProps)(Dashboard)

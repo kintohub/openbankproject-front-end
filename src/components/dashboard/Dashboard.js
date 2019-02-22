@@ -6,6 +6,7 @@ import SignUpPage from '../signUp/SignUpPage'
 
 import HomeContainer from '../../containers/HomeContainer'
 import AboutContainer from '../../containers/AboutContainer'
+import SignUpContainer from '../../containers/SignUpContainer'
 
 import styles from './Dashboard.module.sass'
 
@@ -15,12 +16,9 @@ const RoutesContainer = posed.div({
 })
 
 class Dashboard extends Component {
-  componentDidMount() {
-    this.props.authorize()
-  }
-
   render() {
     const { location } = this.props
+    console.log(location, 'dash')
     return (
       <div id="site-container">
         <div id="content-container">
@@ -32,12 +30,12 @@ class Dashboard extends Component {
           </header>
         </div>
         <PoseGroup>
-          <RoutesContainer key={location.pathname}>
+          <RoutesContainer key={location.key}>
             <Switch location={location}>
               <Route exact path="/" component={HomeContainer} />
               <Route exact path="/about-us" component={AboutContainer} />
               <Route exact path="/log-in" component={AboutContainer} />
-              <Route exact path="/sign-up" component={SignUpPage} />
+              <Route exact path="/sign-up" component={SignUpContainer} />
             </Switch>
           </RoutesContainer>
         </PoseGroup>

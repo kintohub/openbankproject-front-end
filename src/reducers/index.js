@@ -2,7 +2,9 @@ import { combineReducers } from 'redux'
 import { reducer as reduxFormReducer } from 'redux-form'
 import user from './user'
 
-export default combineReducers({
+const rootReducer = combineReducers({
   form: reduxFormReducer,
   user
 })
+
+export default rootReducer

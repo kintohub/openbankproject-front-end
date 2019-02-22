@@ -7,18 +7,7 @@ export const GETUSERDETAILS = 'GETUSERDETAILS'
 export const AUTH = 'AUTH'
 export const UPDATE_TOKEN = 'UPDATE_TOKEN'
 
-export const signUp = data => dispatch => {
-  return axios.post('/users/signup', data).then(() => {
-    dispatch(push('/'))
-  })
-}
-
-export const tokenUpdate = token => {
-  return {
-    type: UPDATE_TOKEN,
-    token
-  }
-}
+export const tokenUpdate = token => ({ type: UPDATE_TOKEN, token })
 
 export const authorize = () => dispatch => {
   return axios
@@ -28,6 +17,26 @@ export const authorize = () => dispatch => {
     })
     .then(response => {
       const token = response.data.data.token
-      tokenUpdate(token)
+      dispatch(tokenUpdate(token))
     })
 }
+
+export const signUp = data => dispatch => {
+  console.log(data, 'in action')
+  return axios
+    .post(
+      `${
+        process.env.REACT_APP_SERVER_URL
+      }/openbankprojectloginapi/users/signup`,
+      data
+    )
+    .then(response => {
+      // dispatch(push('/'))
+    })
+}
+//
+// export const logIn = data => dispatch => {
+//   return axios.post('/users/login', data).then(() => {
+//     dispatch(push('/'))
+//   })
+// }
