@@ -4,14 +4,13 @@ import CustomField from './CustomField'
 
 class SignUpForm extends Component {
   render() {
-    const { handleSubmit, pristine, reset, submitting } = this.props
-
+    const { handleSubmit, submitting } = this.props
     return (
       <form onSubmit={handleSubmit}>
         <div>
           <div>
             <Field
-              name="first_name"
+              name="firstName"
               component={CustomField}
               id="first_name"
               type="text"
@@ -20,7 +19,7 @@ class SignUpForm extends Component {
               focusHere={true}
             />
             <Field
-              name="last_name"
+              name="lastName"
               component={CustomField}
               id="last_name"
               type="text"
@@ -36,7 +35,7 @@ class SignUpForm extends Component {
               placeholder="first name"
             />
             <Field
-              name="user_name"
+              name="username"
               component={CustomField}
               id="user_name"
               type="text"
@@ -54,6 +53,7 @@ class SignUpForm extends Component {
             />
           </div>
         </div>
+        <button type="submit">hit dis</button>
       </form>
     )
   }
