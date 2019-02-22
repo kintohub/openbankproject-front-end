@@ -6,7 +6,7 @@ import SignUpPage from '../signUp/SignUpPage'
 import HomeContainer from '../../containers/HomeContainer'
 import AboutContainer from '../../containers/AboutContainer'
 
-import styles from './App.module.css'
+import styles from './App.module.sass'
 const App = () => (
   <div>
     <header className={styles.header}>
