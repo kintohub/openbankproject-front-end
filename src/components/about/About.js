@@ -11,10 +11,10 @@ class About extends Component {
           </div>
         </div>
         <div>
-          <p>
-            We are making <b>AWESOME</b> things at
-            <a href="https://www.kintohub.com/"> KintoHub</a>
-          </p>
+          <h1>
+            We are making <b>AWESOME</b> things at <br />
+            <a href="https://www.kintohub.com/">KintoHub</a>
+          </h1>
           <p>
             Empowering Developers to build, deploy and scale Websites, APIs &
             Microservices without needing to learn Kubernetes. Connect a git

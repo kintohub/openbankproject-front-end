@@ -27,7 +27,12 @@ class LoginForm extends Component {
               placeholder="JunjiItoLovesTomie"
             />
           </div>
-          <button type="submit">hit dis</button>
+          <p className={styles.password}>
+            Your password should EITHER be at least 10 characters long and
+            contain mixed numbers and both upper and lower case letters and at
+            least one special character, OR be longer than 16 characters
+          </p>
+          <button type="submit">Log In</button>
         </form>
       </div>
     )

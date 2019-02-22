@@ -5,18 +5,49 @@
   display: flex
   align-items: flex-start
   justify-content: flex-start
-  padding: 100px
+  padding: 50px 100px 100px 100px
   background-image: linear-gradient(to right, $color2 50%, $color4 50%, $color4 75%, $color3 75%)
   h1
     color: $color1
-    font-size: 20em
+    font-size: 18em
     margin: 0
+    animation: flicker 1s linear forwards
   p
     color: $color1
     font-size: 20px
-    margin-top: 0
+    margin: 0 0 10px 0
+    b
+      color: $color5
     a
       color: $color5
+  h2
+    margin: 0
+    letter-spacing: 0.1em
+    b
+      font-family: 'Anton', sans-serif
+      text-transform: uppercase
+      color: $color5
+      font-size: 1.2em
+
+  h3
+    letter-spacing: 0.1em
 
 a
   text-decoration: none
+
+.indented
+  margin-left: 20px
+
+@keyframes flicker
+  0%
+    color: $color5
+  10%
+    color: $color1
+  12%
+    color: $color5
+  50%
+    color: $color1
+  60%
+    color: $color5
+  100%
+    color: $color1
