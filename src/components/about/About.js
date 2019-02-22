@@ -2,7 +2,13 @@ import React, { Component } from 'react'
 
 class About extends Component {
   render() {
-    return <div>this is the about page</div>
+    return (
+      <div>
+        <p>
+          We are making <b>awesome</b> things at <a href="">KintoHub</a>
+        </p>
+      </div>
+    )
   }
 }
 

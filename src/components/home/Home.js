@@ -7,7 +7,7 @@ class Home extends Component {
     const { isLoggedIn } = this.props
     return (
       <div className={styles.HomePage}>
-        <div className={styles.background}>
+        <div>
           <h1>Hello</h1>
           {isLoggedIn ? (
             <p>Welcome to the madness</p>

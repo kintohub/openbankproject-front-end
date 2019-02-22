@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Field, reduxForm } from 'redux-form'
 import CustomField from './CustomField'
+import styles from './Forms.module.sass'
 
 class LoginForm extends Component {
   render() {
@@ -8,14 +9,14 @@ class LoginForm extends Component {
     return (
       <form onSubmit={handleSubmit}>
         <div>
-          <div>
+          <div className={styles.section}>
             <Field
               name="password"
               component={CustomField}
               id="password"
               type="password"
               label="Password"
-              placeholder="first name"
+              placeholder="Enter a password"
             />
             <Field
               name="username"
@@ -23,7 +24,7 @@ class LoginForm extends Component {
               id="user_name"
               type="text"
               label="User Name"
-              placeholder="first name"
+              placeholder="JunjiItoLovesTomie"
             />
           </div>
         </div>
