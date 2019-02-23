@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, NavLink, Switch } from 'react-router-dom'
 import posed, { PoseGroup } from 'react-pose'
 
 import HomeContainer from '../../containers/HomeContainer'
@@ -21,10 +21,18 @@ class Dashboard extends Component {
       <div id="site-container">
         <div id="content-container">
           <header className={styles.header}>
-            <Link to="/">Home</Link>
-            <Link to="/log-in">Log In</Link>
-            <Link to="/sign-up">Sign Up</Link>
-            <Link to="/about-us">About KintoHub</Link>
+            <NavLink exact activeClassName={styles.active} to="/">
+              Home
+            </NavLink>
+            <NavLink exact activeClassName={styles.active} to="/log-in">
+              Log In
+            </NavLink>
+            <NavLink exact activeClassName={styles.active} to="/sign-up">
+              Sign Up
+            </NavLink>
+            <NavLink exact activeClassName={styles.active} to="/about-us">
+              About KintoHub
+            </NavLink>
             <button className={styles.link} onClick={signOut}>
               Sign Out
             </button>

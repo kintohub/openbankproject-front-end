@@ -57,7 +57,7 @@ class Home extends Component {
           ) : (
             <p>
               You need to <Link to="/log-in">LOG IN</Link> or{' '}
-              <Link to="/sign-up">SIGN UP</Link> first to see the page
+              <Link to="/sign-up">SIGN UP</Link> first to see your user details.
             </p>
           )}
         </div>

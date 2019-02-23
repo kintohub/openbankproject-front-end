@@ -1,6 +1,5 @@
 import {
   SIGNUP,
-  AUTH,
   UPDATE_TOKEN,
   SAVE_USER_DETAILS,
   LOGOUT,
@@ -22,6 +21,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         auth: {
+          ...state.auth,
           token: newToken
         }
       }
@@ -30,18 +30,18 @@ export default (state = initialState, action) => {
         ...state,
         userInformation: action.data,
         auth: {
+          ...state.auth,
           isLoggedIn: true
         }
       }
     case SAVE_USER_DETAILS:
       return {
         ...state,
-        details: action.data
-      }
-    case AUTH:
-      return {
-        ...state,
-        isLoggedIn: action.data
+        details: action.data,
+        auth: {
+          ...state.auth,
+          isLoggedIn: true
+        }
       }
     case LOGOUT: {
       return {

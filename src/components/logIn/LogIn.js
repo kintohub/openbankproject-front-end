@@ -5,16 +5,23 @@ import styles from './LogIn.module.sass'
 
 class LogIn extends Component {
   render() {
-    const { onSubmit } = this.props
+    const { onSubmit, isUserLoggedIn } = this.props
     return (
       <div className={styles.HomePage}>
         <div>
           <h2>Log In</h2>
-          <LogInForm onSubmit={onSubmit} />
-          <p>
-            Dont have an account? <br />
-            <Link to="/sign-up">Go to the sign in page</Link>
-          </p>
+          <LogInForm onSubmit={onSubmit} isUserLoggedIn={isUserLoggedIn} />
+          {!isUserLoggedIn ? (
+            <p>
+              Dont have an account? <br />
+              <Link to="/sign-up">Go to the sign in page</Link>
+            </p>
+          ) : (
+            <h1>
+              Why not check out <a href="https://www.kintohub.com/">KintoHub</a>{' '}
+              in the meantime?
+            </h1>
+          )}
         </div>
       </div>
     )
