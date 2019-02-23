@@ -11,20 +11,20 @@ class LoginForm extends Component {
         <form onSubmit={handleSubmit}>
           <div className={styles.section}>
             <Field
-              name="password"
-              component={CustomField}
-              id="password"
-              type="password"
-              label="Password"
-              placeholder="Enter a password"
-            />
-            <Field
               name="username"
               component={CustomField}
               id="user_name"
               type="text"
               label="User Name"
               placeholder="JunjiItoLovesTomie"
+            />
+            <Field
+              name="password"
+              component={CustomField}
+              id="password"
+              type="password"
+              label="Password"
+              placeholder="Enter a password"
             />
           </div>
           <p className={styles.password}>
