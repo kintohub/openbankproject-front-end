@@ -9,18 +9,24 @@ class LogIn extends Component {
     return (
       <div className={styles.HomePage}>
         <div>
-          <h2>Log In</h2>
-          <LogInForm onSubmit={onSubmit} isUserLoggedIn={isUserLoggedIn} />
+          <h1>Log In</h1>
           {!isUserLoggedIn ? (
-            <p>
-              Dont have an account? <br />
-              <Link to="/sign-up">Go to the sign in page</Link>
-            </p>
+            <>
+              <LogInForm onSubmit={onSubmit} />
+              <p>
+                Dont have an account? <br />
+                <Link to="/sign-up">Go to the sign in page</Link>
+              </p>
+            </>
           ) : (
-            <h1>
-              Why not check out <a href="https://www.kintohub.com/">KintoHub</a>{' '}
-              in the meantime?
-            </h1>
+            <>
+              <h2>You are already logged in!</h2>
+              <p>
+                Why not check out{' '}
+                <a href="https://www.kintohub.com/">KintoHub</a> in the
+                meantime?
+              </p>
+            </>
           )}
         </div>
       </div>

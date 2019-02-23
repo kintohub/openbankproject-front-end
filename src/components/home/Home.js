@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div className={styles.HomePage}>
         <div>
-          <h1>Hello</h1>
+          <h1>Hello!</h1>
           {isLoggedIn ? (
             <div>
               {details && (

@@ -10,12 +10,14 @@ class SignUp extends Component {
         <div>
           <h1>Sign Up</h1>
           {isUserLoggedIn ? (
-            <h2>
-              {' '}
-              You are already logged in!
-              <br />
-              To log in with another account sign out and sign up again.
-            </h2>
+            <div>
+              <h2>
+                {' '}
+                You are already logged in!
+                <br />
+              </h2>
+              <p>To log in with another account sign out and sign up again.</p>
+            </div>
           ) : (
             <SignUpForm onSubmit={onSubmit} />
           )}
