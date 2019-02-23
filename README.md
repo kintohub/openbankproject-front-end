@@ -6,13 +6,13 @@ Client side app for OBP Login API example
 
 # First time setup
 
-* run `npm install`
+* run `npm install && npm run build`
 
 # Run
 
 * `npm start` -> run dev server
 
-* `npm run build && npm run now-start` -> to run prod
+* `npm run now-start` -> to run prod
 
 # Env vars
   - check .env-example
